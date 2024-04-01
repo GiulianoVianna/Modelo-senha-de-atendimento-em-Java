@@ -50,9 +50,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton1" max="32767" attributes="0"/>
-                          <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTextField1" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
+                          <Component id="btn_prioritario" max="32767" attributes="0"/>
+                          <Component id="btn_normal" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txt_senha" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -67,11 +67,11 @@
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+              <Component id="txt_senha" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" pref="72" max="-2" attributes="0"/>
+              <Component id="btn_prioritario" min="-2" pref="72" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" pref="72" max="-2" attributes="0"/>
+              <Component id="btn_normal" min="-2" pref="72" max="-2" attributes="0"/>
               <EmptySpace pref="36" max="32767" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
           </Group>
@@ -90,7 +90,7 @@
         <Property name="text" type="java.lang.String" value="Senhas para Atendiemento"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="txt_senha">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="0"/>
@@ -101,7 +101,7 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btn_prioritario">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="1"/>
@@ -112,10 +112,10 @@
         <Property name="text" type="java.lang.String" value="Atendimento Priorit&#xe1;rio"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_prioritarioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btn_normal">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="1"/>
@@ -125,6 +125,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Atendimento Normal"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_normalActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>

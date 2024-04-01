@@ -31,9 +31,9 @@ public class SenhasAtendimentoView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        txt_senha = new javax.swing.JTextField();
+        btn_prioritario = new javax.swing.JButton();
+        btn_normal = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -54,22 +54,27 @@ public class SenhasAtendimentoView extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(102, 0, 255));
         jLabel1.setText("Senhas para Atendiemento");
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_senha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        txt_senha.setForeground(new java.awt.Color(255, 255, 255));
+        txt_senha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Atendimento Prioritário");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_prioritario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_prioritario.setForeground(new java.awt.Color(255, 255, 255));
+        btn_prioritario.setText("Atendimento Prioritário");
+        btn_prioritario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_prioritarioActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Atendimento Normal");
+        btn_normal.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_normal.setForeground(new java.awt.Color(255, 255, 255));
+        btn_normal.setText("Atendimento Normal");
+        btn_normal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_normalActionPerformed(evt);
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(102, 0, 255));
 
@@ -96,9 +101,9 @@ public class SenhasAtendimentoView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(77, 77, 77)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btn_prioritario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_normal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(37, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -108,21 +113,25 @@ public class SenhasAtendimentoView extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_prioritario, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_normal, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+   
+    private void btn_prioritarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_prioritarioActionPerformed
+        atendimentoPrioritario();
+    }//GEN-LAST:event_btn_prioritarioActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btn_normalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_normalActionPerformed
+        atendimentoNormal();
+    }//GEN-LAST:event_btn_normalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,6 +162,7 @@ public class SenhasAtendimentoView extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new SenhasAtendimentoView().setVisible(true);
             }
@@ -160,11 +170,41 @@ public class SenhasAtendimentoView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btn_normal;
+    private javax.swing.JButton btn_prioritario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txt_senha;
     // End of variables declaration//GEN-END:variables
+
+    private void atendimentoPrioritario() {
+        gerarSenhas("Prioritário");
+    }
+
+    private void atendimentoNormal() {
+        gerarSenhas("Normal");
+    }
+
+    int contAtendPrioritario = 0;
+    int contAtendNormal = 0;
+    
+    private void gerarSenhas(String tipoSenha) {
+        
+        int numero;
+        String prefixo;
+        
+        if("Prioritário".equals(tipoSenha)){
+            contAtendPrioritario++;
+            numero = contAtendPrioritario;
+            prefixo = "A";
+        }else{
+            contAtendNormal++;
+            numero = contAtendNormal;
+            prefixo = "B";
+        }
+        String senha = prefixo + String.format("%03d", numero);
+        txt_senha.setText(senha);
+    }
+        
 }
